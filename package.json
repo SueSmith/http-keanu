@@ -1,0 +1,25 @@
+{
+  "name": "fastly-io-demo",
+  "version": "0.0.1",
+  "description": "A demo showing how you can optimize your Glitch images",
+  "main": "index.html",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "vite-plugin-handlebars": "^1.6.0",
+    "vite": "^4.4.9"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead"
+  ],
+  "engines": {
+    "node": "16.x"
+  },
+  "glitch": {
+    "projectType": "generated_static"
+  }
+}
