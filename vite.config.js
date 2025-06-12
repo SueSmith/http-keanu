@@ -35,7 +35,7 @@ const content = `
         </p>
         <p class="random">
           🎲
-          <a href="?code=-1">Choose a random code</a>
+          <a href="/random.html">Choose a random code</a>
         </p>
         <div class="codes">
             <div class="highlight selected" id="code{{{code}}}">
@@ -75,15 +75,23 @@ const codePages = settings.list.map(function (c) {
         [c.code + ".html"]:  c
     }
 });
+let rand = {
+  rand: true,
+  settings: JSON.stringify(settings.list)
+}
+console.log(rand)
 const pageData = {
     '/index.html': {
         settings,
+    },
+    '/random.html': {
+        rand
     }
 };
 settings.list.forEach((c) => {
     pageData["/" + c.code + ".html"] =  c
 });
-console.log(pageData);
+//console.log(pageData);
 const fse = require('fs-extra');
 codePages.forEach((cp) => {
     fse.outputFileSync(Object.keys(cp)[0], content);
