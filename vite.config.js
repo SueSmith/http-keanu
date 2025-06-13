@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 import handlebars from "vite-plugin-handlebars";
 import settings from "./codes.json";
-
+/*
 const content = `
 <html lang="en">
   <head>
@@ -86,6 +86,9 @@ const pageData = {
     },
     '/random.html': {
         rand
+    },
+    "/nope.html": {
+      settings
     }
 };
 settings.list.forEach((c) => {
@@ -94,16 +97,14 @@ settings.list.forEach((c) => {
 //console.log(pageData);
 const fse = require('fs-extra');
 codePages.forEach((cp) => {
-    fse.outputFileSync(Object.keys(cp)[0], content);
+    fse.outputFileSync("public/"+Object.keys(cp)[0], content);
 });
-
+*/
 // https://vitejs.dev/config/
 export default defineConfig({
     plugins: [
         handlebars({
-            context(pagePath) {
-                return pageData[pagePath];
-            },
+            context: { settings }
         }),
     ],
     build: {
@@ -111,8 +112,7 @@ export default defineConfig({
     },
     rollupOptions: {
         input: {
-            main: 'index.html',
-            codePages
+            main: 'index.html'
         },
     }
 });

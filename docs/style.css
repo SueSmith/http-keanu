@@ -186,7 +186,6 @@ p.random a:link, p.random a:hover, p.random a:visited {
   padding: 0.5rem;
 
   background: #ffffff;
-  display:inline;
 }
 .highlight img, #joker img {
   width:90vw;

@@ -13,10 +13,10 @@
       name="og:description"
       content="An app for learning about status codes!"
     />
-    <meta property="og:title" content="HTTP Keanu ({{{status}}} {{{name}}})" />
-    <meta property="og:image" content="{{{img}}}" />
+    <meta property="og:title" content="HTTP Keanu (WELP)" />
+    <meta property="og:image" content="https://cdn.glitch.global/b8209f22-6edd-46cc-8707-e2d42e09b6e7/keanu.jpg?v=1702505475354" />
 
-    <title>HTTP Keanu ({{{status}}} {{{name}}})</title>
+    <title>HTTP Keanu (WELP)</title>
 
     <link rel="stylesheet" href="/style.css" />
 
@@ -34,32 +34,22 @@
           <a href="/random.html">Choose a random code</a>
         </p>
         <div class="codes">
-            <div class="highlight selected" id="code{{{code}}}">
+            <div class="highlight selected" id="codenope">
 
-              <h2>{{code}}</h2>
-              <h3>{{name}}</h3>
+              <h2>WELP</h2>
+              <h3>Nope</h3>
               <div class="imghold">
-                <img src="{{pic}}" alt="{{alt}}" />
+                <img src="https://cdn.glitch.global/b8209f22-6edd-46cc-8707-e2d42e09b6e7/keanu.jpg?v=1702505475354" alt="Keanu holding up his hands" />
               </div>
 
               <div class="extra">
-                <p>{{info}}</p>
-                {{#if joker}}
+                <p>
                   <a
                     href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/"
-                  >HTTP status codes on MDN</a>
-                {{else}}
-                  <a
-                    href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/{{{code}}}"
-                  >{{code}} on MDN</a>
-                {{/if}}
+                  >HTTP status codes on MDN</a></p>
               </div>
             </div>
         </div>
-        <p id="bonus">
-          Bonus: try selecting an invalid code, like
-          <a href="?code=1000">1000</a>
-        </p>
       </div>
     </div>
 
